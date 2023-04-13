@@ -128,3 +128,19 @@ This requires:
 {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 ```
 
+### My Own Trouble Shoot
+#### tmux와 같이 써서 컬러스킴이 나가버리는 경우
+```
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+```
+다음 라인을 `~/.tmux.conf` 에 작성한다.
+
+### 참고자료
+#### Tmux
+https://bluecolorsky.tistory.com/32
+https://hbase.tistory.com/200
+
+#### NeoVim
+https://coldmater.tistory.com/category/vim?page=2
+

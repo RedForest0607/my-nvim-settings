@@ -2,4 +2,14 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+	"nvim-tree/nvim-tree.lua",
+	version = "*",
+	depedencies = {
+		"nvim-tree/nvim-web-dvicons",
+	},
+	config = function ()
+		require("nvim-tree").setup {}
+	end,
+	vim.api.nvim_set_keymap('n', '<F3>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+}

@@ -161,7 +161,9 @@ require('lazy').setup({
       return vim.fn.executable 'make' == 1
     end,
   },
-
+  {
+    'Raimondi/delimitMate'
+  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
